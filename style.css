@@ -1,0 +1,55 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c6e49;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.hero {
+    background-color: #5a9a56;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c6e49;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
