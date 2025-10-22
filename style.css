@@ -1,72 +1,127 @@
+/* --- Estilos gerais --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Fundo cinza claro */
-    color: #333;
+  font-family: "Poppins", sans-serif;
+  background: #f7fdf7;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* --- Cabeçalho --- */
 header {
-    background-color: #e55b13; /* Cor da Pitanga */
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background: linear-gradient(135deg, #67b26f, #4ca2cd);
+  color: white;
+  text-align: center;
+  padding: 30px 20px 80px;
+  position: relative;
 }
 
-header h1 {
-    margin-bottom: 5px;
+header .logo h1 {
+  font-size: 2.4em;
+  margin-bottom: 8px;
 }
 
-nav {
-    background-color: #333;
-    overflow: hidden;
-    text-align: center;
+header .logo p {
+  font-size: 1.1em;
+  opacity: 0.9;
 }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+/* --- Menu fixo --- */
+.menu {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 8px 20px;
 }
 
-nav a:hover {
-    background-color: #555;
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-nav a.active {
-    background-color: #e55b13; /* Cor de destaque na página atual */
-    color: white;
+.menu a:hover,
+.menu a.ativo {
+  color: #fdfac2;
 }
 
+/* --- Seção principal --- */
 main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
 }
 
-main h2 {
-    color: #e55b13;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+.intro {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #eee;
+.intro h2 {
+  color: #4e944f;
+  font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
+.intro p {
+  margin-bottom: 25px;
+  font-size: 1.05em;
+}
+
+.botao {
+  display: inline-block;
+  background: #4e944f;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background: #6bbf59;
+}
+
+/* --- Rodapé --- */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed; /* Fixa o footer no rodapé da página */
-    bottom: 0;
+  background: #4e944f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+}
+
+/* --- Responsividade (celular/tablet) --- */
+@media (max-width: 700px) {
+  header {
+    padding: 25px 10px 90px;
+  }
+
+  .menu {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .intro {
+    padding: 25px 15px;
+  }
+
+  .botao {
     width: 100%;
+  }
 }
